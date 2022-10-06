@@ -1,32 +1,85 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
-
-
+function maxOfTwoNumbers(number1, number2) {
+     if(number1 > number2){
+      return number1;
+    } else if(number2 > number1) {
+     return number2;
+} else {
+  return number1;
+}
+}
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
-
-
+function findLongestWord(constwords) {
+  let longestword = [''];
+  if(constwords.length === 0 ){
+    return null;
+  }
+  for (let i = 0; i < constwords.length; i++){
+    if (constwords[i].length > longestword.length) {
+      longestword = constwords[i];
+} 
+}
+return longestword;
+}
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
-function sumNumbers() {}
-
-
+function sumNumbers(numbersArr) {
+  let totalsum = 0;
+for (let i=0; i< numbersArr.length; i++){
+  totalsum += numbersArr[i];
+}
+return totalsum;
+}
 
 // Iteration #3.1 Bonus:
-function sum() {}
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+function sum(mixedArrSum) {
+  let totalSumArr = 0;
 
-
+  if(mixedArr.length === 0 ){
+    return null;
+} else if (mixedArr.length === 1){
+    return 1;
+} else if (mixedArr[i] === 0){
+    return 0;
+} else if (typeof mixedArr[i] === "string" ){ 
+  mixedArr[i] = mixedArr.str.length;
+} else if (typeof mixedArr[i] === "true" ) {
+  mixedArr[i] = 1;
+} else if (typeof mixedArr[i] === "false"){
+  mixedArr[i] = 0;
+} else if (typeof mixedArr[i] === "string"){
+  mixedArr[i] = mixedArr[i].str.length;
+}  
+for (let i=0; i< mixedArr.length ;i++){
+totalSumArr += mixedArr[i];
+}
+return totalSumArr;
+}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(totalSumAvg){
+let totalSum = 0;
+let avgSum = 0;
+
+if(numbersAvg.length === 0 ){
+  return null;
+} else if (numbersAvg.length === 1 ){
+  return numbersAvg[i] / numbersAvg.length;
+}
+for (let i=0; i< numbersAvg.length; i++){
+  totalSum += numbersAvg[i];
+  avgSum = totalSum / numbersAvg.length;
+}
+return avgSum;
+}
 
 
 // Level 2: Array of strings
